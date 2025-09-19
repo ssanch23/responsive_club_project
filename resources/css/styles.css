@@ -1,0 +1,424 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "DM Sans", Helvetica, sans-serif;
+    font-optical-sizing: auto;
+
+    font-size: 10px; /* 1rem = 10px */
+    text-align: center;
+    
+    color: #522f26;
+    background: blanchedalmond;
+}
+
+.dark-bg {
+    color: blanchedalmond;
+    background: peru;
+}
+
+main {
+    position: absolute;
+    top: 5.1rem; /* offset fixed header */
+}
+
+h1 {
+    font-family: "Climate Crisis", sans-serif;
+    font-size: 7.2rem;
+    font-weight: 400;
+    font-variation-settings:
+    "YEAR" 2002;
+    font-optical-sizing: auto;
+
+
+    color: blanchedalmond;
+    text-shadow: .25rem .25rem .15rem peru;
+}
+
+h2 {
+    font-size: 3.6rem;
+    font-weight: 800;
+    padding-bottom: 2rem;
+}
+
+h3 {
+    font-family: "DM Mono", monospace;
+    font-size: 2.8rem;
+}
+
+h4 {
+    font-family: "DM Mono", monospace;
+    font-size: 2.2rem;
+}
+
+h5 {
+    font-size: 1.8rem;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+/* navigation bar */
+
+nav {
+    background-color: steelblue;
+    width: 100%;
+    position: fixed;
+    padding: 1.5rem 3rem;
+    z-index: 100;
+}
+
+nav a {
+    font-size: 1.6rem;
+    color: blanchedalmond;
+    text-decoration: underline transparent;
+    text-underline-offset: .2rem;
+    transition: text-decoration-color .2s ease-in-out .1s, text-underline-offset .2s ease-in-out .1s;
+}
+
+
+nav a:hover {
+    text-decoration: underline #522f26;
+    text-underline-offset: .5rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav li {
+    list-style: none;
+}
+
+/* welcome section */
+
+.welcome {
+    background-image: url("/Users/stevensanchez/Documents/Projects/responsive_club_project/resources/images/piedmont-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-height: 50rem;
+    min-height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome h1 {
+    text-wrap: balance;
+
+    width: 100%;
+    padding: 4rem 5%;
+}
+
+@media only screen and (max-width: 600px) {
+    .welcome h1 {
+        font-size: 5.2rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .welcome h1 {
+        font-size: 4rem;
+    }
+}
+
+/* about section */
+.about-section {
+    padding: 3rem 5%;
+}
+
+.about-content {
+    margin: 0 auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-text {
+    text-wrap: balance;
+
+    padding-right: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 3 60%;
+
+}
+
+.about-image-container {
+    overflow: hidden;
+    padding-left: 2rem;
+
+    flex: 0 1 40%;
+}
+
+.about-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 900px) {
+    .about-content {
+        flex-direction: column;
+        align-items: space-around;
+        justify-content: center;
+    }
+
+    .about-text {
+        padding-right: 0;
+        padding-bottom: 2rem;
+    }
+
+    .about-image-container {
+        max-width: 60%;
+        padding-left: 0;
+    }
+}
+
+/* book section */
+
+.current-section {
+    padding: 3rem 10%;
+}
+
+.book-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.book-image-container {
+    width: 25rem;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.book-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.this-month .book-image-container {
+    padding-right: 2rem;
+}
+
+.next-month .book-image-container {
+    padding-left: 2rem;
+}
+
+.book-info {
+    text-align: left;
+    text-wrap: pretty;  
+    color: blanchedalmond;
+
+    max-width: 70%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.book-info p {
+    line-height: 1.4;
+}
+
+.current-section hr {
+    height: .15rem;
+    margin: 3rem 0;
+    border: 0;
+    border-top: .15rem solid #522f26;
+}
+
+@media only screen and (max-width: 700px) {
+    .current-section {
+        padding: 3rem 7%;
+    }
+    .current-section h3 {
+        font-size: 2.2rem;
+    }
+    .current-section h4 {
+        font-size: 1.8rem;
+    }
+    .current-section h5 {
+        font-size: 1.6rem;
+    }
+    .current-section p {
+        font-size: 1.4rem;
+    }
+    .book-image-container {
+        width: 22rem;
+    }
+}
+
+@media only screen and (max-width: 544px) {
+     .current-section .book-image-container {
+        display: none;
+    }
+    .book-info {
+        max-width: 80%;
+    }
+}
+
+/* previous book section */
+
+.previous-section {
+        padding: 3rem 10%;
+}
+
+.previous-grid {
+    display: grid;
+    width: auto;
+    grid-template: repeat(2, 1fr) / repeat(auto-fit, minmax(16rem, 1fr));
+    grid-gap: 2rem;
+    grid-auto-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.previous-section .book-image-container {
+    width: 15rem;
+}
+
+@media only screen and (max-width: 474px) {
+    .previous-section {
+        padding: 3rem 6%;
+    }
+   .previous-section .book-image-container {
+        width: 12rem;
+   }
+   .previous-grid {
+        grid-gap: 1rem;
+   }
+}
+
+/* community section */
+
+.community {
+    padding: 3rem 5%;
+}
+
+.community-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+}
+
+.community-image-container {
+    max-width: 40rem;
+    max-height: 26.66667rem;
+    overflow: hidden;
+    padding: 0 .5rem;
+}
+
+.community-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.community h4 {
+    text-wrap: balance;
+}
+
+@media only screen and (max-width: 725px) {
+    .last-image {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 474px) {
+   .community-image-container {
+        padding: 0;
+   }
+}
+
+
+/* footer with sign-up */
+
+footer {
+    color: blanchedalmond;
+    background-color: steelblue;
+    padding: 2rem;
+}
+
+.newsletter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.newsletter-container label {
+    padding-right: 2rem;
+}
+
+.sign-up {
+    padding-left: 2rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    font-family: "DM Sans", Helvetica, sans-serif;
+    font-size: 1.6rem;
+    border: none;
+}
+
+input[type=email] {
+    color: #522f26;
+    background-color: blanchedalmond;
+    border: 2px solid #522f26;
+    padding: 1rem; 
+}
+
+input[type=email]:focus {
+    outline: none;
+}
+
+input[type=button]{
+    text-decoration: underline transparent;
+    text-underline-offset: .2rem;
+    transition: text-decoration-color .2s ease-in-out .1s, text-underline-offset .2s ease-in-out .1s;
+
+    color: blanchedalmond;
+    background-color: #522f26;
+    border: 2px solid #522f26;
+    padding: 1rem 1.5rem;
+}
+
+input[type=button]:hover{
+   text-decoration: underline peru;
+   text-underline-offset: .5rem;
+   cursor: pointer;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 490px) {
+    .newsletter-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .newsletter-container label {
+        padding: 0 0 1rem 0;
+    }
+    .sign-up {
+        padding: 0;
+    }
+}
