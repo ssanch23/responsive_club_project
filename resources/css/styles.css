@@ -99,7 +99,7 @@ nav li {
 /* welcome section */
 
 .welcome {
-    background-image: url("/Users/stevensanchez/Documents/Projects/responsive_club_project/resources/images/piedmont-bg.jpg");
+    background-image: url("../images/piedmont-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
