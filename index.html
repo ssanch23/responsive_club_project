@@ -14,14 +14,16 @@
 <body>
    
     <header>
-        <h1>Piedmont Book Club</h1>
+        <div class="underlay">
+            <h1>Piedmont</h1>
+        </div>
         <nav>
-            <ol>
+            <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#current">Reading</a></li>
                 <li><a href="#previous">Previously</a></li>
                 <li><a href="#community">Community</a></li>
-            </ol>
+            </ul>
         </nav>
     </header>
     
@@ -30,7 +32,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>Get outside, meet up, discuss books!</h2>
-                    <h5>The Piedmont Park Book Club is a monthly community event with the goal of bringing together people who love books and nature. Come join!</h5>
+                    <p>The <em>Piedmont Park Book Club</em> is a monthly community event with the goal of bringing together people who love books and nature. Come join!</p>
                 </div>
                 <div class="about-image-container">
                     <img src="./resources/images/piedmont-park.jpg" alt="Photo of Piedmont Park" />
@@ -42,9 +44,15 @@
                 <div class="this-month">
                     <h3>Currently Reading</h3>
                     <div class="book-container">
-                        <div class="book-image-container">
-                            <img src="./resources/images/project-hail-mary.jpg" alt="Project Hail Mary Cover"/>
-                        </div>
+                        <div class="book-image">
+                            <div class="book-image-container">
+                                <img src="./resources/images/project-hail-mary.jpg" alt="Project Hail Mary Cover"/>
+                            </div>
+                             <div class="book-links book-small-screen">
+                                <a href="https://www.goodreads.com/book/show/54493401-project-hail-mary">Goodreads</a>
+                                <a href="https://vahibooks.com/book/9780593135228">VaHi Books</a>
+                            </div>
+                        </div>    
                         <div class="book-info">
                             <div class="book-title">
                                 <h4>Project Hail Mary</h4>
@@ -52,8 +60,10 @@
                             </div>
                             <p>Ryland Grace is the sole survivor on a desperate, last-chance mission—and if he fails, humanity and the earth itself will perish. Except that right now, he can’t even remember his own name, let alone the nature of his assignment or how to complete it. Hurtling through space on this tiny ship, it’s up to him to puzzle out an impossible scientific mystery—and conquer an extinction-level threat to our species. </p>
                             <p>Genre: Science Fiction</p>
-                            <h6>Add to your reading list and get more info at <a href="https://www.goodreads.com/book/show/54493401-project-hail-mary">Goodreads</a>.</h6>
-                            <h6>Purchase locally at <a href="https://vahibooks.com/book/9780593135228">Virgina Highland Books</a>.</h6>
+                            <div class="book-links book-large-screen">
+                                <a href="https://www.goodreads.com/book/show/54493401-project-hail-mary">Goodreads</a>.
+                                <a href="https://vahibooks.com/book/9780593135228">VaHi Books</a>
+                            </div>
                         </div>
                     </div>    
                 </div>
@@ -61,8 +71,14 @@
                 <div class="next-month">
                     <h3>Next Month</h3>
                     <div class="book-container reverse">
-                         <div class="book-image-container">
-                            <img src="./resources/images/memory-police.jpg" alt="The Memory Police Cover"/>
+                        <div class="book-image">
+                            <div class="book-image-container">
+                                <img src="./resources/images/memory-police.jpg" alt="The Memory Police Cover"/>
+                            </div>
+                            <div class="book-links book-small-screen">
+                                <a href="https://www.goodreads.com/book/show/37004370-the-memory-police">Goodreads</a>
+                                <a href="https://vahibooks.com/book/9781101911815">VaHi Books</a>
+                            </div>    
                         </div>
                         <div class="book-info">
                             <div class="book-title">
@@ -71,8 +87,11 @@
                             </div>
                             <p>Objects are disappearing: first hats, then ribbons, birds, roses—until things become much more serious. Most are oblivious to these changes, while those with the power to recall the lost objects live in fear of the draconian Memory Police, who are committed to ensuring that what has disappeared remains forgotten. When a young woman discovers that her coworker is in danger from the Memory Police, she concocts a plan to hide him.</p>
                             <p>Genre: Science Fiction</p>
-                            <h6>Add to your reading list and get more info at <a href="https://www.goodreads.com/book/show/37004370-the-memory-police">Goodreads</a>.</h6>
-                            <h6>Purchase locally at <a href="https://vahibooks.com/book/9781101911815">Virgina Highland Books</a>.</h6>
+                            <div class="book-links book-large-screen">
+                                <a href="https://www.goodreads.com/book/show/37004370-the-memory-police">Goodreads</a>
+                                <a href="https://vahibooks.com/book/9781101911815">VaHi Books</a>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -142,7 +161,7 @@
                 <div class="community-image-container">
                     <img src="./resources/images/community-1.jpg" alt="Book club memebers together">
                 </div>
-                <div class="community-image-container">
+                <div class="community-image-container middle-image">
                     <img src="./resources/images/community-2.jpg" alt="Reading by the lake">
                 </div>
                 <div class="community-image-container last-image">
@@ -155,7 +174,7 @@
         <footer>
             <div class="connect-container">
                 <div class="event">
-                    <h5>Next Event</h5>
+                    <h4>Next Event</h4>
                     <div class="event-container">
                         <div class="event-date">
                             <h6>OCT</h6>
@@ -168,14 +187,14 @@
                     </div>
                 </div>
                 <form class="newsletter-container" action="piedmontbookclub@gmail.com" method="POST">
-                    <label for="Email"><h5>Sign up for our newsletter</h5></label>
+                    <label for="Email"><h4>Sign up for our newsletter</h4></label>
                     <div class="sign-up">
                         <input class="sign-up-left" type="email" name="email" id="email" placeholder="Email" autocomplete="email" required">
                         <input class="sign-up-right" type="submit" value="Sign Up">
                     </div>
                 </form>
             </div>
-            <p>Designed by Steven Sanchez.</p>
+            <span>Designed by Steven Sanchez.</span>
         </footer> 
     
     </main>  
