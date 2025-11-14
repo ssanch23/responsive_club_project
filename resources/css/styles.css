@@ -12,10 +12,13 @@
     --light-green: #b7b7a4;
     --brown: #352325;
     --peach: #ddbea9;
+    --font-sans: "IBM Plex Sans", Helvetica, sans-serif;
+    --font-serif: "IBM Plex Serif", "Bodoni 72 Oldstyle", Cochin, Georgia, serif;
+    --font-h1: "Shrikhand", "Bodoni 72 Oldstyle", Cochin, Georgia, serif;
 }
 
 html {
-    font-family: "IBM Plex Sans", Helvetica, sans-serif;
+    font-family: var(--font-sans);
     font-optical-sizing: auto;
     font-size: 10px; /* 1rem = 10px */
     text-align: center;
@@ -31,8 +34,16 @@ footer {
     background-color: var(--dark-green)
 }
 
+h2,
+h4,
+h5,
+h6,
+.underlay:before {
+    font-family: var(--font-serif)
+}
+
 h1 {
-    font-family: "Shrikhand", "Bodoni 72 Oldstyle", Cochin, Georgia, serif;
+    font-family: var(--font-h1);
     font-size: clamp(5.6rem, 8vw, 8.4rem);
     font-weight: 400;
     font-style: normal;
@@ -40,14 +51,6 @@ h1 {
     letter-spacing: .15rem;
     text-wrap: balance;
     text-shadow: .2rem .2rem .15rem var(--brown)
-}
-
-h2,
-h4,
-h5,
-h6,
-.underlay:before {
-    font-family: "IBM Plex Serif", "Bodoni 72 Oldstyle", Cochin, Georgia, serif;
 }
 
 h2 /*about heading */ {
@@ -122,7 +125,6 @@ input[type="submit"]:hover {
     left: 50%;
     transform: translate(-50%, 46%);
     z-index: 100;
-
 }
 
 header h1 {
@@ -487,7 +489,7 @@ footer {
 
 .event h4,
 .newsletter-container h4 {
-    font-family: "IBM Plex Sans";
+    font-family: var(--font-sans);
     font-size: 2.6rem;
     margin-bottom: 2rem;
     font-style: normal;
@@ -529,6 +531,8 @@ footer {
     flex-direction: column;
 }
 
+/* Sign up form */
+
 .sign-up {
     display: flex;
     justify-content: center;
@@ -536,12 +540,8 @@ footer {
 }
 
 input {
-    font-family: "IBM Plex Sans", Helvetica, sans-serif;
+    font-family: var(--font-sans);  
     font-size: 1.6rem;
-    border: none;
-    border-radius: .5rem;
-    outline: none;
-    box-shadow: none;
 }
 
 .sign-up-left {
@@ -550,21 +550,26 @@ input {
 
     max-width: 30rem;
     min-width: 20rem; 
-    border: .25rem solid var(--brown);
-    margin-right: .5rem; 
+    border: .2rem solid var(--brown);
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    outline: none;
+    box-shadow: none;
     padding: 1.25rem;
     flex: 1 1 30rem;
 }
 
 .sign-up-left:focus {
     outline: none;
+    box-shadow: inset 0 0 .2rem var(--brown);
 }
 
 .sign-up-right{
     background-color: var(--brown);
-    border: .25rem solid var(--brown);
+    border: .2rem solid var(--brown);
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
     padding: 1.25rem 1.75rem;
-    margin-left: .5rem;
     flex-shrink: 0;
 }
 
